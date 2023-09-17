@@ -1,0 +1,52 @@
+.transaction {
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #b8b8b8;
+  border-width: 2px;
+  height: 110px;
+}
+.transaction .cost{
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  max-width: 50px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #b8b8b8;
+  border-width: 3px;
+}
+
+.transaction .date{
+  padding: 5px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #b8b8b8;
+  border-width: 3px;
+  width: 50px;
+}
+
+.transaction .date .day{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.transaction .date .weekday{
+  display: flex;
+  justify-content: center;
+}
+
+.transaction .date .month{
+  display: flex;
+  justify-content: center;
+}
+
+.transaction .date .year{
+  display: flex;
+  justify-content: center;
+}
