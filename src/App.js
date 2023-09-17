@@ -1,42 +1,30 @@
-import CostItem from "./Components/CostItem";
+import CostItem from "./Components/Transaction";
 
 function App() {
   const costs = [
-    { date: new Date(2022, 12, 9), name: "Fridge", cost: 999 },
-    { date: new Date(2021, 3, 21), name: "IPhone", cost: 1099 },
-    { date: new Date(2019, 7, 15), name: "T-shirt", cost: 19 },
+    { isSpent: true, date: new Date(2022, 12, 9), description: "Fridge", cost: 999 },
+    { isSpent: false, date: new Date(2021, 3, 21), cost: 1099 },
+    { isSpent:true, date: new Date(2019, 8, 15), description: "T-shirt", cost: 19 },
   ];
   return (
     <div className="App">
       <h1>Test app</h1>
       <CostItem
-        name={costs[0].name}
-        date={costs[0].date.toLocaleDateString("en-us", {
-          weekday: "long",
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-        })}
+        isSpent={costs[0].isSpent}
+        description={costs[0].description}
+        date={costs[0].date}
         cost={costs[0].cost}
       />
       <CostItem
-        name={costs[1].name}
-        date={costs[1].date.toLocaleDateString("en-us", {
-          weekday: "long",
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-        })}
+      isSpent={costs[1].isSpent}
+        description={costs[1].description}
+        date={costs[1].date}
         cost={costs[1].cost}
       />
       <CostItem
-        name={costs[2].name}
-        date={costs[2].date.toLocaleDateString("en-us", {
-          weekday: "long",
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-        })}
+      isSpent={costs[2].isSpent}
+        description={costs[2].description}
+        date={costs[2].date}
         cost={costs[2].cost}
       />
     </div>
