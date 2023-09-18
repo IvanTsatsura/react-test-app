@@ -1,4 +1,5 @@
 import "./Transaction.css";
+import TransactionDate from "./TransactionDate";
 
 function Transaction(props) {
   const description =
@@ -8,18 +9,6 @@ function Transaction(props) {
 
   const cost = props.cost;
   const isSpent = props.isSpent;
-  const day = props.date.toLocaleDateString("en-us", {
-    day: "2-digit",
-  });
-  const weekday = props.date.toLocaleDateString("en-us", {
-    weekday: "short",
-  });
-  const month = props.date.toLocaleDateString("en-us", {
-    month: "short",
-  });
-  const year = props.date.toLocaleDateString("en-us", {
-    year: "numeric",
-  });
 
   return (
     <div className="transaction">
@@ -30,12 +19,7 @@ function Transaction(props) {
         </div>
         <div className="description">{description}</div>
       </div>
-      <div className="date">
-        <h2 className="day">{day}</h2>
-        <div className="weekday">{weekday}</div>
-        <div className="month">{month}</div>
-        <div className="year">{year}</div>
-      </div>
+      <TransactionDate date={props.date}/>
     </div>
   );
 }
