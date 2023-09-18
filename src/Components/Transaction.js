@@ -1,6 +1,13 @@
 import "./Transaction.css";
 
 function Transaction(props) {
+  const description =
+    props.description != null && props.description !== ""
+      ? props.description
+      : "no info";
+
+  const cost = props.cost;
+  const isSpent = props.isSpent;
   const day = props.date.toLocaleDateString("en-us", {
     day: "2-digit",
   });
@@ -16,15 +23,15 @@ function Transaction(props) {
 
   return (
     <div className="transaction">
-      {props.isSpent ? (
-        <div className="spent-indicator-true"> You spent {props.cost} </div>
-      ) : (
-        <div className="spent-indicator-false"> You receive {props.cost} </div>
-      )}
-      <div className="description">{props.description}</div>
-      <div className="cost">${props.cost}</div>
+      <div className="left-part">
+        <div className="cost-spent">
+          <div className="is-spent">{isSpent ? "SPENT" : "RECEIVED"}</div>
+          <div className="cost">${cost}</div>
+        </div>
+        <div className="description">{description}</div>
+      </div>
       <div className="date">
-        <h1 className="day">{day}</h1>
+        <h2 className="day">{day}</h2>
         <div className="weekday">{weekday}</div>
         <div className="month">{month}</div>
         <div className="year">{year}</div>
