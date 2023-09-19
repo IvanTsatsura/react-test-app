@@ -1,4 +1,5 @@
 import Transactions from "./Components/Transactions/Transactions";
+import Header from "./Components/Header/Header";
 
 function App() {
   const costs = [
@@ -18,7 +19,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <h1>Test app</h1>
+      <Header/>
       <Transactions transactions={costs} />
     </div>
   );
