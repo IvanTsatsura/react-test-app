@@ -1,9 +1,3 @@
-:root {
-  --f-color: #f7f7f7;
-  --s-color: #fc6c10;
-  --t-color: #d9d9d9;
-  --f-color: #86868b;
-}
 .header {
   margin-bottom: 0;
   display: flex;
