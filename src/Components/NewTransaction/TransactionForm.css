@@ -37,6 +37,7 @@
     border-color: var(--f-color);
     color: var(--f-color);
     font-weight: 600;
+    padding: 5px;
 }
 .transaction-form .add-button{
     color: var(--s-color); 
