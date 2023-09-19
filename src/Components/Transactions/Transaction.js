@@ -7,15 +7,15 @@ function Transaction(props) {
       ? props.description
       : "no info";
 
-  const cost = props.cost;
+  const amount = props.amount;
   const isSpent = props.isSpent;
 
   return (
     <div className="transaction">
       <div className="left-part">
-        <div className="cost-spent">
+        <div className="amount-spent">
           <div className="is-spent">{isSpent ? "SPENT" : "RECEIVED"}</div>
-          <div className="cost">${cost}</div>
+          <div className="amount">${amount}</div>
         </div>
         <div className="description">{description}</div>
       </div>
