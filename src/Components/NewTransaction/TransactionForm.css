@@ -19,4 +19,25 @@
     color: var(--s-color);
     align-items: flex-end;
     align-content: space-between;
+    font-weight: 600;
+}
+.transaction-form .row{
+    border-radius: 5px;
+    border-color: var(--t-color);
+    box-shadow: 0px 2px 5px var(--f-color);
+    color: var(--f-color);
+}
+.transaction-form .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 0px 0px;
+}
+.transaction-form .button{
+    border-radius: 5px;
+    border-color: var(--f-color);
+    color: var(--f-color);
+    font-weight: 600;
+}
+.transaction-form .add-button{
+    color: var(--s-color); 
 }
