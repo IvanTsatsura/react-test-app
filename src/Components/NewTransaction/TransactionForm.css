@@ -1,0 +1,22 @@
+.transaction-form{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    margin: 16px 10px 0px 10px;
+    padding: 0px 10px 10px 10px;
+    background-color: var(--t-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px var(--f-color);
+}
+.transaction-form .control{
+    display: flex;
+    flex-direction: column;
+    color: var(--f-color);
+}
+.transaction-form .spent-control{
+    display: flex;
+    color: var(--s-color);
+    align-items: flex-end;
+    align-content: space-between;
+}

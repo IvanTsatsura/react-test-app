@@ -1,5 +1,6 @@
 import Transactions from "./Components/Transactions/Transactions";
 import Header from "./Components/Header/Header";
+import NewTransaction from "./Components/NewTransaction/NewTransaction";
 
 function App() {
   const amounts = [
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <NewTransaction/>
       <Transactions transactions={amounts} />
     </div>
   );
