@@ -14,6 +14,10 @@
     flex-direction: column;
     color: var(--f-color);
 }
+.transaction-form .tr-label{
+    display: flex;
+    flex-direction: column;
+}
 .transaction-form .spent-control{
     display: flex;
     color: var(--s-color);
@@ -41,4 +45,8 @@
 }
 .transaction-form .add-button{
     color: var(--s-color); 
+}
+.transaction-form .check{
+    position: relative;
+    top: 2px;
 }
