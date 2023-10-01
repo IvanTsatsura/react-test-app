@@ -2,13 +2,13 @@ import "./TransactionForm.css";
 import React, { useState } from "react";
 
 function TransactionForm() {
-  const [isSpent, setIsSpent] = useState("");
+  const [isSpent, setIsSpent] = useState(false);
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
 
   const isSpentChangeHandler = (event) => {
-    setIsSpent(event.target.value);
+    isSpent === false ? setIsSpent(true) : setIsSpent(false);
   };
   const descriptionChangeHandler = (event) => {
     setDescription(event.target.value);
@@ -27,6 +27,10 @@ function TransactionForm() {
       description: description,
       date: new Date(date),
     };
+    setIsSpent(false);
+    setAmount("");
+    setDescription("");
+    setDate("");
     event.preventDefault();
     console.log(transactionData);
   };
@@ -37,6 +41,7 @@ function TransactionForm() {
           <label className="tr-label-spent">
             SPENT
             <input
+              value={isSpent}
               id="input-is-spent"
               className="check"
               type="checkbox"
@@ -48,6 +53,7 @@ function TransactionForm() {
           <label className="tr-label">
             Amount
             <input
+              value={amount}
               className="row"
               id="input-amount"
               type="number"
@@ -61,6 +67,7 @@ function TransactionForm() {
           <label className="tr-label">
             Description
             <input
+              value={description}
               id="input-description"
               className="row"
               type="text"
@@ -71,7 +78,12 @@ function TransactionForm() {
         <div className="control">
           <label className="tr-label">
             Date
-            <input className="row" type="date" onChange={dateChangeHandler} />
+            <input
+              value={date}
+              className="row"
+              type="date"
+              onChange={dateChangeHandler}
+            />
           </label>
         </div>
         <div className="buttons">
